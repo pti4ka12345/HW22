@@ -27,7 +27,6 @@ for question in questions:
 
 
 stats = statistics(questions)
-
 print(
     f"That's all! You answered {stats['right_answer']} "
     f"out of {stats['total_questions']} "

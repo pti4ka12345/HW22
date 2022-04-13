@@ -8,8 +8,12 @@ class GenericQuestion:
         self.theme = theme
         self.is_asked = False
         self.user_answer = user_answer
-        self.score = difficulty*10
+        self.__score = difficulty*10
         self.is_right = True
+
+    @property
+    def score(self):
+        return self.__score
 
     def __repr__(self):
         return self.text
@@ -25,4 +29,3 @@ class Question(GenericQuestion):
 
     def build_question(self):
         return f"Difficulty: {self.difficulty}, theme: {self.theme} .\nQuestion: \n{self.text}"
-

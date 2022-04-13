@@ -31,7 +31,7 @@ def statistics(question_list):
     for question in question_list:
         if question.is_asked:
             stats['total_questions'] += 1
-            if question.is_right:
+            if question.is_correct():
                 stats['total_score'] += question.score
                 stats['right_answer'] += 1
 
